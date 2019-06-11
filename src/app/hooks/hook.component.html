@@ -1,0 +1,9 @@
+
+<h1>{{titulo}}</h1>
+<button (click)="cambiarTitulo()" class="btn btn-success">CambiarTitulo</button>
+<button (click)="ocultarVideoJuegos(false)" *ngIf="mostrarVideoJuegos" class="btn btn-warning">Ocultar</button>
+<button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrarVideoJuegos" class="btn btn-primary">Mostrar</button>
+
+<app-videojuego *ngIf="mostrarVideoJuegos"></app-videojuego>
+
+<router-outlet></router-outlet>
