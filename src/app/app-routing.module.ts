@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
-import { MenuListComponent } from './menu-list/menu-list.component';
 import { HcComponent } from './hc/hc.component';
 import { importExportComponent } from './importExport/importExport.component';
 import { HookComponent } from './hooks/hook.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserComponent } from './user/user.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 const routes: Routes = [
   
   { path: 'Hc', component: HcComponent},
   { path: 'importExport', component: importExportComponent},
+  { path: 'user', component: UserComponent},
+  { path: 'user-list', component: UserListComponent},
+  { path: 'user/edit/:id', component: UserListComponent},
   { path: 'Hooks', component: HookComponent},
   {
     path: '',

@@ -6,7 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   // styleUrls: ['./hc.component.css']
 })
 export class HcComponent implements OnInit {
-  constructor() { }
+  name: string;
+
+  constructor() { 
+    this.name = 'Luis';
+  }
 
   ngOnInit() {
   }

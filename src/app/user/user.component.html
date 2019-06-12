@@ -1,0 +1,35 @@
+<div class="container">
+    <!-- <h1>Hola {{name}}</h1> -->
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+            <th>Id</th>  
+            <th>Nombre</th>
+            <th>Nombre de Usuario</th>
+            <th>Correo</th>
+            <th>Telefono</th>
+            <th>Sitio Web</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.website}}</td>
+                <td>
+                    <!-- <a [routerLink]="['/user/edit', user.id]" class="btn btn-info btn-block">
+                        Editar
+                        </a> -->
+                        <a  class="btn btn-info btn-block" (click)="editUser(user.id)">
+                            Editar
+                            </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

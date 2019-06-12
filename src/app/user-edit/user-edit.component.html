@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-2">
+            <div class="card">
+              <div class="card-body">
+                <form action="">
+                <div class="form-group">
+                    <input type="text" name="name" [(ngModel)]="users.name" placeholder="name" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="username" [(ngModel)]="users.username" placeholder="username" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="email" [(ngModel)]="users.email" placeholder="email" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" [(ngModel)]="users.phone" placeholder="phone" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="website" [(ngModel)]="users.website" placeholder="website" class="form-control" autofocus>
+                </div>
+                  <button class="btn btn-success btn-block" (click)="edit ? updateUser() : saveNewuser()">
+                    Save
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
