@@ -1,0 +1,33 @@
+/*
+   server-side-angular-way.component.css
+*/
+.no-data-available {
+  text-align: center;
+}
+
+/*
+   src/styles.css (i.e. your global style)
+*/
+.dataTables_empty {
+  display: none;
+}
+
+app-progress-bar{
+  width: 90%;
+}
+
+button{
+  width: 50%;
+  height: 40px;
+}
+
+input{
+  margin-left: 20px;
+  height: 40px;
+  font-size: 20px;
+  flex: 1;
+  min-width: 50px;
+}
+.initInput{
+  display: flex;
+}

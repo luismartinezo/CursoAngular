@@ -7,3 +7,43 @@
 <app-videojuego *ngIf="mostrarVideoJuegos"></app-videojuego>
 
 <router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table datatable [dtOptions]="dtOptions" class="row-border hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="persons?.length != 0">
+            <tr *ngFor="let person of persons">
+                <td>{{ person.id }}</td>
+                <td>{{ person.firstName }}</td>
+                <td>{{ person.lastName }}</td>
+            </tr>
+        </tbody>
+        <tbody *ngIf="persons?.length == 0">
+          <tr>
+            <td colspan="3" class="no-data-available">No data!</td>
+          </tr>
+        <tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<h1>
+  <app-progress-bar [progress]="counterProgress"></app-progress-bar>
+  <app-countdown #countdown
+  [init]="totalCountdown"
+  (onDecrease)="updateProgress($event)"
+  (onComplete)="countdownFinished()"></app-countdown>
+  <div class="initInput">
+    <label for="totalCountdown">Init on: </label>
+    <input type="text" id="totalCountdown" [(ngModel)]="totalCountdown">
+  </div>
+  <button (click)="countdown.startCountdown(); counterProgress=0;" class="btn btn-primary">Reiniciar</button>
+</h1>

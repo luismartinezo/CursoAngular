@@ -9,19 +9,19 @@ import { ActivatedRoute } from '@angular/router';
   // styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-    
+
     edit: boolean = false;
     users: User[] = [];
 
-  constructor(private UserService: UserService, private activatedRoute:ActivatedRoute) { 
+  constructor(private UserService: UserService, private activatedRoute:ActivatedRoute) {
   }
 
   ngOnInit() {
     const params = this.activatedRoute.snapshot.params;
-    
+
     if (params.id) {
-    this.users = this.UserService.getUser();
-    // this.edit = true; 
+    // this.users = this.UserService.getUser();
+    // this.edit = true;
     console.log(params);
   }
 

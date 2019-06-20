@@ -8,7 +8,7 @@ import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 
 const routes: Routes = [
-  
+
   { path: 'Hc', component: HcComponent},
   { path: 'importExport', component: importExportComponent},
   { path: 'user', component: UserComponent},
