@@ -28,6 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataTablesModule } from 'angular-datatables';
 import { CountdownComponent } from 'src/app/countdown/countdown.component';
 import { ProgressBarComponent } from 'src/app/progress-bar/progress-bar.component';
+
+// jquery
+import * as $ from 'jquery';
+
 @NgModule({
 
   declarations: [

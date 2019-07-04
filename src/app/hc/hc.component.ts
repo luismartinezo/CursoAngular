@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { stringify } from '@angular/core/src/render3/util';
 import { User } from '../models/user';
 import { Observable } from 'rxjs';
+// jqury
+declare let $:any;
 
 @Component({
   selector: 'app-hc',
@@ -19,6 +21,10 @@ export class HcComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('#logo').click( function (e) {
+      e.preventDefault();
+      $('header').css('background', 'yellow').css('height', '150px');
+    });
   }
 
   readUser(user: User): Observable<User[]>{

@@ -3,6 +3,8 @@ Creamos carpetar llamada data y dentro bd en nuestro disco.
 luego ingresamos a la carpeta de mongo y corremos el demonio de mongodb llamado mongod.exe dependiendo la version
 Para administrar las bases de datos podemos instalar roboMongo / Robo3T o en la instalacion ya viene MongoDb Compass
 
+ -- correr json-server --watch server/db.json
+ 
 ## MongoDB en Mac OS
 Los pasos para instalar Mongo en un Mac son los siguientes:
 Descargas la versión para tu OSX, en mi caso (mongodb-osx-x86_64-3.4.10). Lo extraes a tu carpeta de preferencia (Ejemplo : /Sandbox/mongoDB
