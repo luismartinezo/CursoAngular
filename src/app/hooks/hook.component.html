@@ -34,7 +34,15 @@
     </div>
   </div>
 </div>
-
+<div class="col-md-6">
+  <select placeholder="Placeholder" [(ngModel)]="userSelected"  (ngModelChange)="onUsuarioSeleccionado($event)" name="item" class="form-control">
+    <option *ngFor="let item of usuarios" [value]="item.id">
+      {{item.nombre}}
+    </option>
+  </select>
+  Usuario Seleccionado es: {{userSelected}}
+  {{textoModificado}}
+</div>
 <h1>
   <app-progress-bar [progress]="counterProgress"></app-progress-bar>
   <app-countdown #countdown
@@ -47,3 +55,4 @@
   </div>
   <button (click)="countdown.startCountdown(); counterProgress=0;" class="btn btn-primary">Reiniciar</button>
 </h1>
+

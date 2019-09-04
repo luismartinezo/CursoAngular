@@ -1,0 +1,10 @@
+<h2>Pipe de Fecha</h2>
+<b>Fecha normal:</b> {{fecha}} <br>
+<b>FullDate :</b> {{fecha | date:'fullDate' }} <br>
+<b>Formato dd/MM/yy :</b> {{fecha | date:'dd/MM/yy' }}
+<hr>
+<input type="text" class="form-control" [(ngModel)]="userId" (keyup.enter)="cargarUser()">
+<div *ngIf="user">
+  <h2>{{user.first_name + ' ' +  user.last_name}}</h2>
+  <img src="{{user.avatar}}" alt="avatar">
+</div>

@@ -18,14 +18,23 @@ export class VideojuegoComponent implements OnInit {
   // Area para las propiedades
   public titulo: string;
   public listado: string;
+  public color: string;
+  public marca:string;
 
   constructor( public progress: NgProgress) { 
     // Aca podemos pasarle valores a las propiedades
     this.titulo = "Componente de Video Juego";
     this.listado = "Listado de los  Video Juego mas populares";
+    this.color = 'blue';
+    this.marcas =  new Array();
+    this.mi_marca = 'fila';
+    
 
   }
 
   ngOnInit() {}
 
+  getMarca(){
+    alert(this.mi_marca)
+  }
 }

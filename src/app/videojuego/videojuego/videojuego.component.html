@@ -6,4 +6,32 @@
     <li>Prime of Persia</li>
     <li>Mario</li>
   </ul>
+
+  
+<!-- ngSwitch -->
+<h2>directiva ngSwitch</h2>
+<p>El color es: </p>
+<ul [ngSwitch]="color">
+<li *ngSwitchCase="'yellow'">
+El color es el <span [ngStyle]="{'background': color}"> amarillo</span>
+</li>
+<li *ngSwitchCase="'red'">
+  El color es el <span [ngStyle]="{'background': color}">rojo</span>
+</li>
+<li *ngSwitchCase="'blue'">
+  El color es el <span [ngStyle]="{'background': color}">azul</span>
+</li>
+<li *ngSwitchCase="'orange'">
+  El color es el <span [ngStyle]="{'background': color}">Naranja</span>
+</li>
+<!-- <li *ngSwitchDefault>
+no hay color
+</li> -->
+</ul>
+<!-- fin ngSwitch -->
+ <h2>Two way data-binding y evento click</h2>
+ <input type="text" [(ngModel)]="mi_marca" class="form-control" name="" value="">
+ <button type="" (click)="getMarca()" class="btn btn-primary">Mostrar Marca</button>
+ <button type="" (click)="addMarca()" class="btn btn-primary">Agregar Marca</button>
+{{mi_marca}}
 </div>

@@ -6,6 +6,8 @@ import { HookComponent } from './hooks/hook.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { ContactoComponent } from './Form-Contact/contacto.component';
+import { ExternoComponent } from './externo/externo.component';
 
 const routes: Routes = [
 
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'user-list', component: UserListComponent},
   { path: 'user/edit/:id', component: UserListComponent},
   { path: 'Hooks', component: HookComponent},
+  { path: 'contacto', component: ContactoComponent},
+  { path: 'externo', component: ExternoComponent},
   {
     path: '',
     component: HookComponent,

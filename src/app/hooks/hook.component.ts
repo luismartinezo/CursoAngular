@@ -40,6 +40,8 @@ totalCountdown = 10;
    // Creamos el objeto
    dtOptions: DataTables.Settings = {};
    persons: Person[];
+   usuarios: User[];
+   userSelected: number;
    // We use this trigger because fetching the list of persons can be quite long,
   // thus we ensure the data is fetched before rendering
   dtTrigger: Subject<Person> = new Subject();
@@ -49,7 +51,7 @@ totalCountdown = 10;
   mostrarVideoJuegos = true;
   displayedColumns = ['Id', 'Nombre', 'Apellido', 'Nacionalidad', 'Edad'];
   dataSource: any;
-
+  textoModificado: string;
   constructor( private dataService: UserService, private http: HttpClient) {
     // Aca podemos pasarle valores a las propiedades
     this.titulo = 'Componente de Hook';
@@ -57,6 +59,13 @@ totalCountdown = 10;
 
   }
   ngOnInit(): void {
+    // Prueba de select
+    this.usuarios = [
+      {id: 1, nombre: 'Luis', apellido: 'Martinez', nacionalidad: 'Colombia', edad: 20},
+      {id: 2, nombre: 'Carlos', apellido: 'Montaño', nacionalidad: 'Maxico', edad: 30},
+      {id: 3, nombre: 'Edison', apellido: 'Bejarano', nacionalidad: 'India', edad: 40}
+    ];
+    this.userSelected = 2;
     const that = this;
     this.dtOptions = {
       pagingType: 'full_numbers',
@@ -115,5 +124,13 @@ totalCountdown = 10;
 
   countdownFinished() {
     console.log('Contador ha finalizado');
+  }
+  onUsuarioSeleccionado(val: any) {
+    // web Api
+    this.customFunction(val);
+  }
+
+  customFunction(val: any) {
+    this.textoModificado = 'El valor ' + val + ' seleccionado desde la lista';
   }
 }

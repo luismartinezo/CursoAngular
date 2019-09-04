@@ -29,8 +29,11 @@ import { DataTablesModule } from 'angular-datatables';
 import { CountdownComponent } from 'src/app/countdown/countdown.component';
 import { ProgressBarComponent } from 'src/app/progress-bar/progress-bar.component';
 
+
 // jquery
 import * as $ from 'jquery';
+import { ContactoComponent } from './Form-Contact/contacto.component';
+import { ExternoComponent } from './externo/externo.component';
 
 @NgModule({
 
@@ -48,7 +51,9 @@ import * as $ from 'jquery';
     UserListComponent,
     UserEditComponent,
     ProgressBarComponent,
-    CountdownComponent
+    CountdownComponent,
+    ContactoComponent,
+    ExternoComponent
   ],
   imports: [
     // Aca importamos Modulos externos instalados o creados por nosotros
@@ -65,6 +70,7 @@ import * as $ from 'jquery';
     MatSortModule,
     MatInputModule,
     DataTablesModule
+
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   // Aca cargamos servicios
