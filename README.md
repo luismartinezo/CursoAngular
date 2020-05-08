@@ -2,9 +2,9 @@
 
 Este proyecto fue creado con [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 Curso de Angular del Master en JavaScript donde tenemos Componentes, directivas, twoWayDataBinding, Eventos, Selectores,
-formularios, Pipes, Rutas, cargas lentas y todo los relacionado con Angular.
+formularios, Pipes, Rutas, carga lenta entre otras relacionado con Angular.
 
-## Actualizacion
+## Actualización
 
 _Importante actualizar angular antes de instalar si ya esta instalado en el equipo_
 
@@ -15,7 +15,7 @@ _Importante actualizar angular antes de instalar si ya esta instalado en el equi
 Instalar nuevamente
 -npm install -g @angular/cli
 
-## Instalacion y Configuracion
+## Instalación y Configuración
 
 - Clonar o descargar proyecto, para clonar ejecutamos el comando `git clone https://github.com/luismartinezo/Curso-Angular.git`
 - Acceder al directorio del proyecto y ejecutar el comando `npm install` para instalar dependencias.
@@ -24,9 +24,9 @@ Instalar nuevamente
 
 Correr `ng serve -o` para un servidor de desarrollo. La aplicación se carga automáticamente en la url `http://localhost:4200/`, tambien si cambia alguno de los archivos de origen.
 
-## Generacion para produccion
+## Generación para producción
 
-Correr `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el flag `--prod` para especificar una construcción de produccion.
+Correr `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`. Use el flag `--prod` para especificar una construcción de producción.
 
 ## Ejecución de pruebas unitarias
 
@@ -88,7 +88,7 @@ Existe tambien los Modulos.
 
 ### Nota Adicional:
 
-- El flash `--prefix` nombre sirve para nombrar la aplicacion con el nombre que tendran los Selectores,
+- El flash `--prefix` nombre sirve para nombrar la aplicación con el nombre que tendran los Selectores,
   ejemplo: `ng new angular_project --prefix ng` Todos los selectores empezaran con el prefijo `ng`
 
-- El comando ng g c nombre -is --flat no crea el archivo css del componente
+- El comando `ng g c nombre -is --flat` sirve para no crear el archivo css o scss del componente
